@@ -4,6 +4,7 @@ namespace JeffersonGoncalves\Commerce\Checkout\Services;
 
 use JeffersonGoncalves\Commerce\Cart\Models\Cart;
 use JeffersonGoncalves\Commerce\Checkout\Workflows\CompleteCartWorkflow;
+use JeffersonGoncalves\Commerce\Order\Events\OrderPlaced;
 use JeffersonGoncalves\Commerce\Order\Models\Order;
 
 class CheckoutService
@@ -21,6 +22,8 @@ class CheckoutService
 
         /** @var Order $order */
         $order = $context->result('create_order');
+
+        event(new OrderPlaced($order));
 
         return $order;
     }

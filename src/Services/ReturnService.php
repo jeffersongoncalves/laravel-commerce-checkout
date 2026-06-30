@@ -3,6 +3,7 @@
 namespace JeffersonGoncalves\Commerce\Checkout\Services;
 
 use JeffersonGoncalves\Commerce\Checkout\Workflows\ReturnWorkflow;
+use JeffersonGoncalves\Commerce\Order\Events\ReturnReceived;
 use JeffersonGoncalves\Commerce\Order\Models\Order;
 use JeffersonGoncalves\Commerce\Order\Models\OrderReturn;
 
@@ -29,6 +30,8 @@ class ReturnService
 
         /** @var OrderReturn $return */
         $return = $context->result('create_return');
+
+        event(new ReturnReceived($return));
 
         return $return;
     }
