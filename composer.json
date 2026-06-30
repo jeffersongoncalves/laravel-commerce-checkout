@@ -1,0 +1,75 @@
+{
+    "name": "jeffersongoncalves/laravel-commerce-checkout",
+    "description": "Commerce checkout orchestration — price resolution and the cart-to-order saga workflow (with inventory reservation and rollback).",
+    "keywords": [
+        "laravel",
+        "commerce",
+        "checkout",
+        "workflow"
+    ],
+    "homepage": "https://github.com/jeffersongoncalves/laravel-commerce",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Jefferson Gonçalves",
+            "email": "gerson.simao.92@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "jeffersongoncalves/laravel-commerce-cart": "self.version",
+        "jeffersongoncalves/laravel-commerce-core": "self.version",
+        "jeffersongoncalves/laravel-commerce-customer": "self.version",
+        "jeffersongoncalves/laravel-commerce-inventory": "self.version",
+        "jeffersongoncalves/laravel-commerce-order": "self.version",
+        "jeffersongoncalves/laravel-commerce-pricing": "self.version",
+        "jeffersongoncalves/laravel-commerce-product": "self.version",
+        "jeffersongoncalves/laravel-commerce-region": "self.version",
+        "jeffersongoncalves/laravel-commerce-sales-channel": "self.version"
+    },
+    "require-dev": {
+        "larastan/larastan": "^2.9|^3.0",
+        "laravel/pint": "^1.0",
+        "nunomaduro/collision": "^8.0",
+        "orchestra/testbench": "^9.0|^10.0|^11.0",
+        "pestphp/pest": "^3.0|^4.0",
+        "pestphp/pest-plugin-laravel": "^3.0|^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "JeffersonGoncalves\\Commerce\\Checkout\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JeffersonGoncalves\\Commerce\\Checkout\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "JeffersonGoncalves\\Commerce\\Checkout\\CommerceCheckoutServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "format": "vendor/bin/pint",
+        "analyse": "vendor/bin/phpstan analyse"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "support": {
+        "issues": "https://github.com/jeffersongoncalves/laravel-commerce/issues",
+        "source": "https://github.com/jeffersongoncalves/laravel-commerce"
+    }
+}
