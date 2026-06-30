@@ -16,7 +16,7 @@ abstract class TestCase extends Orchestra
      */
     protected array $migrationPackages = [
         'product', 'pricing', 'inventory', 'cart', 'order',
-        'customer', 'region', 'sales-channel',
+        'customer', 'region', 'sales-channel', 'tax', 'promotion',
     ];
 
     protected function getEnvironmentSetUp($app): void

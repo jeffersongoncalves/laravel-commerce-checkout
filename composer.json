@@ -26,8 +26,10 @@
         "jeffersongoncalves/laravel-commerce-order": "self.version",
         "jeffersongoncalves/laravel-commerce-pricing": "self.version",
         "jeffersongoncalves/laravel-commerce-product": "self.version",
+        "jeffersongoncalves/laravel-commerce-promotion": "self.version",
         "jeffersongoncalves/laravel-commerce-region": "self.version",
-        "jeffersongoncalves/laravel-commerce-sales-channel": "self.version"
+        "jeffersongoncalves/laravel-commerce-sales-channel": "self.version",
+        "jeffersongoncalves/laravel-commerce-tax": "self.version"
     },
     "require-dev": {
         "larastan/larastan": "^2.9|^3.0",
